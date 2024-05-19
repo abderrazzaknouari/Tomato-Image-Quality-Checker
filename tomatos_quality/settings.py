@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%%viv57g03g-zg%q7li8w8+2bn!ge-26-64ne8#42t#l63eg0x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh"]
 
 STATIC_URL = 'static/'
 
@@ -141,3 +141,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Define the path to the directory where your models are stored
 MODELS_DIR = os.path.join(BASE_DIR, 'models')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
